@@ -17,7 +17,7 @@ public class Main {
         // aquí ta el frame uwu
         JFrame MainFrame = new JFrame("RECETARIO :)");
         MainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        MainFrame.setSize(1000, 1000);
+        MainFrame.setSize(500, 500);
 
         Scanner scn = new Scanner(System.in);
 
@@ -26,7 +26,7 @@ public class Main {
         // ok so esta es la pagina de inicio y tiene lo que es el recetario y pide el
         // nombre de la receta
         JLabel Benvenuto = new JLabel("Bienvenido al recetario, ingrese el nombre de la receta");
-        Benvenuto.setBounds(10, 10, 500, 20);
+        Benvenuto.setBounds(10, 10, 300, 20);
         JTextField Nombre = new JTextField("Receta");
         Nombre.setBounds(10, 40, 200, 20);
         JButton Buscar = new JButton("Aceptar :)");
