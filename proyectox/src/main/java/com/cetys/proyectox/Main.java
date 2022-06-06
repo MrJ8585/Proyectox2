@@ -17,7 +17,9 @@ public class Main {
         // aquí ta el frame uwu
         JFrame MainFrame = new JFrame("RECETARIO :)");
         MainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        MainFrame.setResizable(false);
         MainFrame.setSize(500, 500);
+        MainFrame.setLayout(null);
 
         Scanner scn = new Scanner(System.in);
 
@@ -40,7 +42,8 @@ public class Main {
 
         });
 
-        String nombre = Nombre.getText();
+        String nombre = Nombre.getText(); // aquí quité el scanner y puse gettext para que el usuario ingrese el nombre
+                                          // de la receta
         Receta nueva_Rec = new Receta(nombre);
         int dec = 1;
         System.out.println("Ahora se agregaran los ingredientes");
