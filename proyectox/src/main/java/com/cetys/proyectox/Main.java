@@ -3,6 +3,8 @@ package com.cetys.proyectox;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -15,12 +17,30 @@ public class Main {
         // aquí ta el frame uwu
         JFrame MainFrame = new JFrame("RECETARIO :)");
         MainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        MainFrame.setSize(700, 700);
+        MainFrame.setSize(1000, 1000);
 
         Scanner scn = new Scanner(System.in);
 
-        System.out.println("Bienvenido al recetario, ingrese el nombre de la receta: ");
-        String nombre = scn.nextLine();
+        // System.out.println("Bienvenido al recetario, ingrese el nombre de la receta:
+        // ");
+        // ok so esta es la pagina de inicio y tiene lo que es el recetario y pide el
+        // nombre de la receta
+        JLabel Benvenuto = new JLabel("Bienvenido al recetario, ingrese el nombre de la receta");
+        Benvenuto.setBounds(10, 10, 500, 20);
+        JTextField Nombre = new JTextField("Receta");
+        Nombre.setBounds(10, 40, 200, 20);
+        JButton Buscar = new JButton("Aceptar :)");
+        Buscar.setBounds(10, 100, 80, 20);
+        Buscar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // aquí creo que tiene que ir el if pa buscar las recetas
+
+            }
+
+        });
+
+        String nombre = Nombre.getText();
         Receta nueva_Rec = new Receta(nombre);
         int dec = 1;
         System.out.println("Ahora se agregaran los ingredientes");
@@ -40,6 +60,10 @@ public class Main {
         scn.close();
 
         MainFrame.setVisible(true); // ya hay frame lesgooo
+
+        MainFrame.add(Benvenuto);
+        MainFrame.add(Nombre);
+        MainFrame.add(Buscar);
     }
 
 }
