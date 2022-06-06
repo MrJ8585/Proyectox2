@@ -193,12 +193,15 @@ public class Main {
 
         frame.getContentPane().removeAll();
         frame.repaint();
-        JLabel texto1 = new JLabel("Receta");
-        texto1.setBounds(10, 10, 400, 20);
+        JLabel texto3 = new JLabel("Receta");
+        texto3.setBounds(10, 10, 400, 20);
+        JLabel texto1 = new JLabel(nueva_receta.Name);
+        texto1.setBounds(10, 40, 400, 20);
         JLabel texto2 = new JLabel(nueva_receta.printRec());
-        texto2.setBounds(10, 40, 200, 200);
+        texto2.setBounds(10, 70, 200, 200);
         frame.add(texto1);
         frame.add(texto2);
+        frame.add(texto3);
 
     }
 
@@ -220,18 +223,18 @@ public class Main {
         Nombre.setBounds(10, 40, 200, 20);
         JButton Buscar = new JButton("Aceptar :)");
         Buscar.setBounds(10, 100, 120, 20);
-        nueva_receta = new Receta(Nombre.getText());
         Buscar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // aquí creo que tiene que ir el if pa buscar las recetas
+                try {
+                    nueva_receta = new Receta(Nombre.getText());
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
                 funcion1(MainFrame);
             }
 
         });
-
-        String nombre = Nombre.getText(); // aquí quité el scanner y puse gettext para que el usuario ingrese el nombre
-                                          // de la receta
         MainFrame.setVisible(true); // ya hay frame lesgooo
 
         MainFrame.add(Benvenuto);

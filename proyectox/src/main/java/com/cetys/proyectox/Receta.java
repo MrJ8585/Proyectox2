@@ -12,7 +12,6 @@ public class Receta {
 
     // variables
     String Name;
-    boolean error = true;
 
     // scanner y files
     Scanner scn;
@@ -20,16 +19,13 @@ public class Receta {
     FileWriter write;
 
     // archivos
-    public String pasos = "C:/Users/Josea/Desktop/Programas/Proyectos_de_Java/proyectox/src/main/java/com/cetys/proyectox/Storage/Pasos.txt";
-    public String datos = "C:/Users/Josea/Desktop/Programas/Proyectos_de_Java/proyectox/src/main/java/com/cetys/proyectox/Storage/Ingredientes.txt";
-    public String receta = "C:/Users/Josea/Desktop/Programas/Proyectos_de_Java/proyectox/src/main/java/com/cetys/proyectox/Storage/Receta.txt";
+    public String pasos = "C:/Users/Josea/Documents/GitHub/Proyectox2/proyectox/src/main/java/com/cetys/proyectox/Storage/Pasos.txt";
+    public String datos = "C:/Users/Josea/Documents/GitHub/Proyectox2/proyectox/src/main/java/com/cetys/proyectox/Storage/Ingredientes.txt";
+    public String receta = "C:/Users/Josea/Documents/GitHub/Proyectox2/proyectox/src/main/java/com/cetys/proyectox/Storage/Receta.txt";
 
     // arraylists
     private ArrayList<Ingrediente> ingred = new ArrayList<>();
     public ArrayList<String> Pasos = new ArrayList<>();
-
-    // nuevas variables
-    public boolean flag = false;
 
     // constructor
     public Receta(String name) throws IOException, FileNotFoundException {
@@ -128,12 +124,13 @@ public class Receta {
     }
 
     public String printRec() throws FileNotFoundException {
-        String a = "";
+        String a = "<html>";
         file = new File(receta);
         scn = new Scanner(file);
         while (scn.hasNextLine()) {
-            a = a + (scn.nextLine()) + "\n";
+            a = a + (scn.nextLine()) + "<br />";
         }
+        a = a + "</html>";
         return a;
     }
 }
