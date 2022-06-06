@@ -1,0 +1,9 @@
+leche
+1.0
+taza
+cereal
+1.0
+taza
+platano
+1.0
+mitad
