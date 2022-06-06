@@ -1,37 +1,36 @@
 package com.cetys.proyectox;
 
-public class Ingrediente{
+public class Ingrediente {
 
-    private String Nombre, Unidad_medida;
-    private double Cantidad;
-    
-    public Ingrediente(String nombre){
+    private String Nombre, Unidad_medida, Cantidad;
+    private double cantidad;
+
+    public Ingrediente(String nombre) {
         this.Nombre = nombre;
     }
 
-    public void set_cantidad(double cantidad){
+    public void set_cantidad(String cantidad) {
         this.Cantidad = cantidad;
     }
 
-    public double get_cantidad(){
+    public String get_cantidad() {
         return Cantidad;
     }
 
-    public void set_Unidad(String Unidad){
+    public void set_Unidad(String Unidad) {
         this.Unidad_medida = Unidad;
     }
 
-    public String get_unidad(){
+    public String get_unidad() {
         return Unidad_medida;
     }
 
-    public String get_Nombre(){
+    public String get_Nombre() {
         return Nombre;
     }
 
-    public void set_Nombre(String nombre){
+    public void set_Nombre(String nombre) {
         this.Nombre = nombre;
     }
-
 
 }
