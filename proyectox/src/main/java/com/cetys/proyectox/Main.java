@@ -28,7 +28,7 @@ public class Main {
         // ok so esta es la pagina de inicio y tiene lo que es el recetario y pide el
         // nombre de la receta
         JLabel Benvenuto = new JLabel("Bienvenido al recetario, ingrese el nombre de la receta");
-        Benvenuto.setBounds(10, 10, 300, 20);
+        Benvenuto.setBounds(10, 10, 400, 20);
         JTextField Nombre = new JTextField("Receta");
         Nombre.setBounds(10, 40, 200, 20);
         JButton Buscar = new JButton("Aceptar :)");
